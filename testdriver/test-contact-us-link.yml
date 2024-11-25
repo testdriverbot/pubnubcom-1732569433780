@@ -1,0 +1,20 @@
+version: 4.1.27
+steps:
+  - prompt: Focus the browser window.
+    commands:
+      - command: hover-text
+        text: PubNub
+        description: logo in the top left corner
+        action: click
+  - prompt: Click on the "Contact Sales" button in the header.
+    commands:
+      - command: hover-text
+        text: Contact Sales
+        description: button in the header
+        action: click
+  - prompt: >-
+      Assert that the contact sales page or form is displayed.  # Use the
+      content of the file from the environment
+    commands:
+      - command: assert
+        expect: Contact our experts!
